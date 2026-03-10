@@ -1,0 +1,303 @@
+:root{
+  --primary: #7B1D84;
+  --primary-light: #c70fd4b0;
+  --secondary: #37123E;
+  --tertiary: #F9A826;
+
+  --dark-base: #14001B;
+  --dark-contrast: #1E0425;
+  --text-light: #ffffff; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+  line-height: 1.6;
+  font-family:  "Open Sans", sans-serif;
+  overflow-x: hidden;
+  width: 100vw;
+  color: var(--text-light);
+  background-color: var(--dark-base);
+  text-decoration: none;
+}
+.my-btn{
+    background-color: var(--primary-light);
+    color: var(--text-light);
+    padding: 0.25rem 1.5rem;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    border: 1px solid inherit;
+    box-shadow: 0px 0px 6px var(--secondary);
+}
+.my-btn:hover{
+    background-color: var(--primary);
+    color: var(--tertiary);
+}
+.my-btn-2{
+    background-color: transparent;
+    color: var(--text-light);
+    padding: 0.25rem 1.5rem;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    box-shadow: 2px 2px 2px var(--dark-contrast);
+}
+.my-btn-2:hover{
+    border: 1px solid var(--primary-light) !important;
+}
+.navbar-container{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+.navbar-css{
+    background-color: var(--secondary);
+    width: 100%;
+    padding: 0.5rem 2rem;
+    margin-top: 1.25rem;
+    box-shadow: 10px 10px 10px var(--dark-contrast);
+}
+
+.navbar ul li a{
+    color: var(--text-light) !important;
+    transition: all 0.5s ease;
+}
+.navbar ul li a:hover{
+    color: var(--tertiary) !important;
+}
+#home{
+  background-image: 
+    linear-gradient(76deg, var(--dark-base) 70%, var(--primary) 100%),
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 
+    100% 100%, 
+    40px 40px;
+  background-blend-mode: overlay;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.hero-container{
+    line-height: 3;
+    margin-top: 5rem;
+}
+.hi{
+    font-weight: bold;
+}
+.me{
+    font-size: 30px;
+}
+.highlight{
+    color: var(--primary-light);
+    font-weight: bold;
+}
+.hero-img-col img{
+    width: 70%;
+    border-color: var(--primary-light) !important;
+    transition: all 0.5s ease;
+    box-shadow: 10px 10px 40px var(--primary);
+}
+.hero-img-col img:hover{
+    filter: grayscale(100);
+}
+.hero-img-col{
+    position: relative;
+}
+.img-container::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--dark-contrast);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+.hero-btns{
+    width: 50%;
+}
+@media (max-width: 960px) {
+  .hero-btns {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-css {
+    border-radius: 0 !important;
+  }
+  .my-btn-2{
+    border-top: 1px solid !important;
+  }
+  .my-btn-2:hover{
+    border-bottom: 1px solid;
+  }
+}
+#about{
+    background-color: var(--dark-contrast);
+    padding: 4rem 0;
+}
+.abt-img-col img{
+    border: 2px solid var(--primary) !important;
+    box-shadow: 10px 10px 10px var(--secondary);
+    width: 90%;
+    transition: all 0.5s ease;
+}
+.abt-img-col img:hover{
+    filter: grayscale(100);
+}
+@media (max-width: 992px){
+    .abt-img-col img{
+        width: 100%;
+    }
+}
+.abt-content-col{
+    line-height: 2;
+}
+.abt-btn-container{
+    border: 1px solid var(--primary);
+    box-shadow: 0px 0px 5px var(--primary);
+}
+.heading{
+    position: relative;
+}
+.heading::before{
+    content: '';
+    z-index: 1;
+    height: 3px;
+    width: 100px;
+    background-color: var(--primary-light);
+    position: absolute;
+    bottom: -7px;
+    right: 38%;
+}
+#skills{
+    background-color: var(--dark-base);
+    padding: 5rem 0;
+}
+.card{
+    background-color: var(--secondary);
+    color: var(--text-light);
+    border: 2px solid var(--dark-contrast);
+    box-shadow: 10px 10px 10px var(--dark-contrast);
+    transition: all 0.5s ease;
+}
+.card:hover{
+    transform: translateY(-5px);
+}
+.services-icon{
+    font-size: 2rem;
+    color: var(--tertiary);
+}
+.fa-star{
+    color: var(--primary);
+}
+.skills-row{
+    padding: 1rem 0;
+}
+.progress{
+    margin: 1rem 0;
+    background-color: var(--dark-contrast);
+    color: var(--primary-light) !important;
+    box-shadow: 0px 0px 5px var(--primary);
+
+}
+.progress-bar{
+    background-color: var(--primary-light) !important;
+}
+.lang-used-container{
+    margin: 1rem 0; 
+}
+.lang-used{
+    padding: 2px 10px;
+}
+.lang-used:first-child{
+    background-color: #F16A30;
+}
+.lang-used:nth-child(2){
+    background-color: #306AF1;
+}
+.lang-used:nth-child(3){
+    background-color: #F2C12D;
+}
+.lang-used:nth-child(4){
+    background-color: #787CB4;
+}
+#portfolio{
+    background-color: var(--dark-contrast);
+}
+#contact {
+  background-color: var(--dark-base);
+}
+
+.contact-form {
+  background-color: var(--dark-contrast);
+  border: 1px solid var(--primary);
+  box-shadow: 0px 0px 10px var(--dark-contrast);
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: var(--secondary);
+  border: 1px solid var(--dark-contrast);
+  color: var(--text-light);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ccc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 5px var(--primary-light);
+  background-color: var(--dark-contrast);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--tertiary);
+}
+
+.social-icons .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--primary-light);
+  border-radius: 50%;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.social-icons .social-link:hover {
+  background-color: var(--primary-light);
+  color: var(--dark-base);
+  transform: translateY(-3px);
+}
+
+/* .progress-bar-animation{
+    animation: bar-animation 2s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+@keyframes bar-animation {
+    from{
+        width: 0%;
+        opacity: 0;
+    }
+    to{
+        width: 100% !important;
+        opacity: 1;
+    }
+} */
