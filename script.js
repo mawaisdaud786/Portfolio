@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const texts = ["Front-End ", "Back-End "];
+  const texts = ["Front-End ", "Web Designer & "];
   const typingElement = document.querySelector(".highlight");
   const typingSpeed = 100;
   const erasingSpeed= 50;
@@ -42,3 +42,18 @@ document.addEventListener("DOMContentLoaded", () => {
   AOS.init();
 
 });
+
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const message = document.getElementById("message");
+const sendMessageButton = document.querySelector(".sendmessage");
+// const whatsapplink = document.querySelector(".sendmessage");
+sendMessageButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const name = username.value.trim();
+  const emailAddress = email.value.trim();
+  const userMessage = message.value.trim();
+  if (name && emailAddress && userMessage) {
+    const whatsappLink = `https://api.whatsapp.com/send?phone=923197612417&text=Hi%20Awais%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.%20Here%20are%20the%20details:%0A${encodeURIComponent(userMessage)}%0AName:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(emailAddress)}`;
+    window.open(whatsappLink);
+  }});
